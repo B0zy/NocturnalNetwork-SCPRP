@@ -1,4 +1,4 @@
-local logo = "nocturnalscprp/logo.png"
+local logo = Material("icons/full.png")
 
 local audioFadeInTime = 2
 local animationTime = 0.5
@@ -425,10 +425,11 @@ function PANEL:Paint(width, height)
 	surface.SetDrawColor(color_black)
 	surface.DrawRect(0, 0, width, height)
 	
-	surface.SetDrawColor(255, 255, 255, 255)
-	surface.SetMaterial(Material(logo))
-	surface.DrawTexturedRect(width / 2 - 200, 50, 400, 400)
+	--surface.SetDrawColor(255, 255, 255, 255)
+	--surface.SetMaterial(Material(logo))
+	--surface.DrawTexturedRect(width / 2 - 200, 50, 400, 400)
 end
+
 
 function PANEL:PaintOver(width, height)
 	if (self.bClosing and self.bFromMenu) then

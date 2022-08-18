@@ -10,10 +10,6 @@ Schema.developers = "Bozy"
 
 -- [[ Schema Config ]] -- 
 
-Schema.MainColor = Color(50, 150, 200)
-Schema.MainColorSelect = Color(130,188,235)
-
-
 function Schema:ZeroNumber(number, length)
     local amount = math.max(0, length - string.len(number))
     return string.rep("0", amount)..tostring(number)
@@ -23,6 +19,10 @@ function Schema:CanPlayerUseBusiness(ply, id)
     return false
 end
 
+
+ix.flag.Add("h", "Acess to heavy equipment", function(client, bGiven)
+    print("h flag given:", bGiven)
+end)
 
 ix.util.Include("sv_schema.lua")
 
