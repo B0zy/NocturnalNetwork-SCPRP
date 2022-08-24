@@ -7,21 +7,15 @@ function CLASS:CanSwitchTo(client)
 end
 
 function CLASS:OnSet(client)
-    local character = client:GetCharacter()
-    local inventory = character:GetInventory()
-    if(character) then
-        character:SetModel("models/player/kerry/class_securety.mdl")
-        ResetInv(inventory)
-        inventory:Add("tfa_ins2_g36c", 1)
-        inventory:Add("heavyarmor", 1)
-    end
+    Respawn(client)
 end
 
 function CLASS:OnSpawn(client)
     local character = client:GetCharacter()
     local inventory = character:GetInventory()
-
     if(character) then
+        client:SetModel("models/player/kerry/class_securety.mdl")
+        ResetInv(inventory)
         inventory:Add("tfa_ins2_g36c", 1) 
     end
 end

@@ -7,6 +7,10 @@ function CLASS:CanSwitchTo(client)
 end
 
 function CLASS:OnSet(client)
+    Respawn(client)
+end
+
+function CLASS:OnSpawn(client)
     local character = client:GetCharacter()
     local inventory = character:GetInventory()
     if(character) then
@@ -14,5 +18,6 @@ function CLASS:OnSet(client)
         ResetInv(inventory)
     end
 end
+
 
 CLASS_GSCO = CLASS.index

@@ -7,14 +7,7 @@ function CLASS:CanSwitchTo(client)
 end
 
 function CLASS:OnSet(client)
-    local character = client:GetCharacter()
-    local inventory = character:GetInventory()
-
-    if(character) then
-        character:SetModel("models/player/guard_pack/guard_05.mdl")
-        ResetInv(inventory)
-        inventory:Add("tfa_ins2_m9", 1)
-    end
+    Respawn(client)
 end
 
 function CLASS:OnSpawn(client)
@@ -22,10 +15,11 @@ function CLASS:OnSpawn(client)
     local inventory = character:GetInventory()
 
     if(character) then
+        character:SetModel("models/player/guard_pack/guard_05.mdl")
+        ResetInv(inventory)
         inventory:Add("tfa_ins2_m9", 1)
+        client:Give("guthscp_keycard_lvl_2")
     end
 end
-
-
 
 CLASS_GSENT = CLASS.index     

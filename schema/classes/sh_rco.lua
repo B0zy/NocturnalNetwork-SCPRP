@@ -7,6 +7,20 @@ function CLASS:CanSwitchTo(client)
     return client:HasClassWhitelist(self.index)
 end
 
+function CLASS:OnSet(client)
+    Respawn(client)
+end
+
+function CLASS:OnSpawN(client)
+    local character = client:GetCharacter()
+    local inventory = character:GetInventory()
+    if(character) then
+        character:SetModel("models/1000shells/sci_boss/sci_boss.mdl")
+        ResetInv(inventory)
+    end
+end
+
+
 CLASS_RCO = CLASS.index
 
 

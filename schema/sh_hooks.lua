@@ -15,3 +15,9 @@ function ApplyHeavyArmor(client)
     client:SetArmor(math.min(client:Armor() + 150, 150))
     print(client:Armor())
 end
+
+
+function Respawn(client) 
+    client:Kill()
+    client:Spawn()
+end
