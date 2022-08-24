@@ -3,7 +3,6 @@ AddCSLuaFile("shared.lua")
 
 include("shared.lua")
 
-
 function ENT:Initialize()
         self:SetModel("models/props_c17/Lockers001a.mdl")
         self:PhysicsInit(SOLID_VPHYSICS)
@@ -19,8 +18,11 @@ function ENT:Initialize()
         end
 end
 
+function sleep(n)
+    os.execute(tonumber(n))
+end
 
-function ENT:Use(a, c) -- a = activater , c = caller
+function ENT:Use(_, caller)
 
     local character = c:GetCharacter()
     local inventory = character:GetInventory()
@@ -32,6 +34,7 @@ function ENT:Use(a, c) -- a = activater , c = caller
             inventory:Add("lightarmor", 1)
         end
     else
+
         print("You are not part of gensec")
     end
 
