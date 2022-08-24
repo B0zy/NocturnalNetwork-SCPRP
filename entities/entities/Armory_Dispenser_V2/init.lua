@@ -30,7 +30,7 @@ function ENT:Use(_, caller)
 
     if(char:GetFaction() == FACTION_GSECURITY) then
         ply:SetAction("Getting Armor..", 5)
-        ply:DoStaredAction(Entity, inv:Add("lightarmor", 1), 5)
+        ply:DoStaredAction(self, inv:Add("lightarmor", 1), 5)
     else
         ply:ChatNotifyLocalized("You are not part of Gensec")
     end

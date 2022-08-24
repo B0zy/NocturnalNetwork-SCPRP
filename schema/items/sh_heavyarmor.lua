@@ -8,7 +8,7 @@ ITEM.functions.Apply = {
         
         local client = itemTable.player
 
-        client:SetArmor(client:Armor() + 200)
+        client:SetArmor(client:Armor() + 200, 200)
 
     end
 
