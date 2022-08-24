@@ -18,7 +18,7 @@ function CLASS:OnSpawn(client)
         character:SetModel("models/player/guard_pack/guard_05.mdl")
         ResetInv(inventory)
         inventory:Add("tfa_ins2_m9", 1)
-        client:Give("guthscp_keycard_lvl_2")
+        client:Give("guthscp_keycard_lvl_1")
     end
 end
 

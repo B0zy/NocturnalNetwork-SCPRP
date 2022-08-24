@@ -19,7 +19,7 @@ function Schema:CanPlayerUseBusiness(ply, id)
     return false
 end
 
-
+-- Using this as a test flag
 ix.flag.Add("h", "Acess to heavy equipment", function(client, bGiven)
     print("h flag given:", bGiven)
 end)

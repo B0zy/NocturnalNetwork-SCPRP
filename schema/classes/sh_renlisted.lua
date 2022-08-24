@@ -8,6 +8,7 @@ end
 
 function CLASS:OnSet(client)
     Respawn(client)
+    client:Give("guthscp_keycard_lvl_1")
 end
 
 

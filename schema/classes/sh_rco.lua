@@ -17,6 +17,7 @@ function CLASS:OnSpawN(client)
     if(character) then
         character:SetModel("models/1000shells/sci_boss/sci_boss.mdl")
         ResetInv(inventory)
+        client:Give("guthscp_keycard_lvl_3")
     end
 end
 

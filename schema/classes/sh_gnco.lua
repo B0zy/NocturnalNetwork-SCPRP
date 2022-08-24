@@ -17,6 +17,7 @@ function CLASS:OnSpawn(client)
         client:SetModel("models/player/kerry/class_securety.mdl")
         ResetInv(inventory)
         inventory:Add("tfa_ins2_g36c", 1) 
+        client:Give("guthscp_keycard_lvl_2")
     end
 end
 
