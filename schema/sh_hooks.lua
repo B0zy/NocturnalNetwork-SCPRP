@@ -6,3 +6,12 @@ function ResetInv(inventory)
     end
 end
 
+function ApplyLightArmor(client)
+    client:SetArmor(math.min(client:Armor() + 50, 50))
+    print(client:Armor())
+end
+
+function ApplyHeavyArmor(client)
+    client:SetArmor(math.min(client:Armor() + 150, 150))
+    print(client:Armor())
+end

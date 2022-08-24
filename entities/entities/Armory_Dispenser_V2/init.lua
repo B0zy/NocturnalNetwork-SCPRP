@@ -19,8 +19,6 @@ end
 
 
 function ENT:Use(_, caller)
-
-
     -- Getting Helix stuff
     local char = caller:GetCharacter()
     local inv = char:GetInventory()
@@ -29,11 +27,8 @@ function ENT:Use(_, caller)
     -- Giving the Player the item to their inventory 
 
     if(char:GetFaction() == FACTION_GSECURITY) then
-        ply:SetAction("Getting Armor..", 5)
-        ply:DoStaredAction(self, inv:Add("lightarmor", 1), 5)
+        inv:Add("lightarmor", 1)
     else
         ply:ChatNotifyLocalized("You are not part of Gensec")
     end
-
-
 end
